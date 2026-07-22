@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TIJANI PERFUMES — عطور فاخرة</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;500;700;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style-addons.css">
+</head>
+<body>
+
+  <!-- TOPBAR مع تبديل اللغة -->
+  <div class="topbar" id="topbar">
+    <span id="deliveryText">🚚 توصيل مجاني في مراكش فقط</span>
+    <span class="sep">|</span>
+    <span id="deliveryCost">المدن القريبة: 35 درهم</span>
+    <span class="sep">|</span>
+    <div class="lang-switch">
+      <button class="lang-btn active" data-lang="ar" onclick="switchLanguage('ar')">🇸🇦 عربي</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="fr" onclick="switchLanguage('fr')">🇫🇷 Français</button>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <button class="header__burger" id="burger" aria-label="القائمة">
+      <span></span><span></span><span></span>
+    </button>
+
+    <a href="#" class="header__logo">
+      <img src="Log2.png" alt="TIJANI PARFUMES" class="logo-img">
+      <div class="logo-text">
+        <span class="logo-main">TIJANI</span>
+        <span class="logo-sub">PERFUMES</span>
+      </div>
+    </a>
+
+    <div class="header__actions">
+      <button id="searchBtn" aria-label="بحث"><i class="fas fa-search"></i></button>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#pack" data-ar="تشكيلاتنا" data-fr="Nos collections">تشكيلاتنا</a>
+    <a href="#about" data-ar="من نحن" data-fr="À propos">من نحن</a>
+    <a href="#contact" data-ar="اتصل بنا" data-fr="Contactez-nous">اتصل بنا</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow" data-ar="✨ عطور فرنسية فاخرة" data-fr="✨ Parfums français de luxe"> ✨ عطور فاخرة</p>
+      <h1 class="hero__title">
+        <span>TIJANI</span>
+        <em>PARFUMES</em>
+      </h1>
+      <p class="hero__desc" data-ar="اكتشف تشكيلتنا الفاخرة من العطور الأصيلة، مصممة خصيصاً لتناسب شخصيتك" data-fr="Découvrez notre collection de parfums authentiques, conçus pour révéler votre personnalité">اكتشف تشكيلتنا الفاخرة من العطور الأصيلة، مصممة خصيصاً لتناسب شخصيتك</p>
+      <div class="hero__btns">
+        <a href="#pack" class="btn btn--gold btn--white-text" data-ar="اكتشف التشكيلات" data-fr="Découvrir">اكتشف التشكيلات</a>
+        <a href="#contact" class="btn btn--outline-white" data-ar="اتصل بنا" data-fr="Contactez-nous">اتصل بنا</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- عرض التوصيل -->
+  <div class="delivery-banner">
+    <div class="delivery-banner__inner">
+      <i class="fas fa-truck"></i>
+      <span><strong data-ar="توصيل مجاني" data-fr="Livraison gratuite">توصيل مجاني</strong> <span data-ar="في مراكش فقط" data-fr="uniquement à Marrakech">في مراكش فقط</span></span>
+      <span class="delivery-banner__sep">|</span>
+      <span><i class="fas fa-map-pin"></i> <span data-ar="المدن القريبة: 35 درهم" data-fr="Villes proches: 35 DH">المدن القريبة: 35 درهم</span></span>
+    </div>
+  </div>
+
+  <!-- PACK SELECTION -->
+  <section class="pack-section" id="pack">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-eye" data-ar="اختر تشكيلتك" data-fr="Choisissez votre collection">اختر تشكيلتك</p>
+        <h2 class="section-title">عطور <em>TIJANI</em></h2>
+        <p class="section-sub" data-ar="اختر الفئة، الحجم، والعدد الذي يناسبك" data-fr="Choisissez la catégorie, la taille et la quantité">اختر الفئة، الحجم، والعدد الذي يناسبك</p>
+      </div>
+
+      <div class="pack-container" id="packContainer">
+        <!-- الخطوة 1 -->
+        <div class="pack-step" id="step1">
+          <h3 data-ar=" اختر الفئة" data-fr=" Choisissez la catégorie"> اختر الفئة</h3>
+          <div class="options-grid">
+            <button class="option-btn gender-btn" data-value="رجال" onclick="selectGender('رجال')">
+              <div class="gender-image-wrapper">
+                <img src="H1.jpg" alt="رجال" class="gender-btn-img"/>
+              </div>
+              <span class="gender-label" data-ar="رجال" data-fr="Homme">رجال</span>
+              <small data-ar="تشكيلة العطور الرجالية" data-fr="Collection homme">تشكيلة العطور الرجالية</small>
+            </button>
+            <button class="option-btn gender-btn" data-value="نساء" onclick="selectGender('نساء')">
+              <div class="gender-image-wrapper">
+                <img src="S.jpg" alt="نساء" class="gender-btn-img"/>
+              </div>
+              <span class="gender-label" data-ar="نساء" data-fr="Femme">نساء</span>
+              <small data-ar="تشكيلة العطور النسائية" data-fr="Collection femme">تشكيلة العطور النسائية</small>
+            </button>
+          </div>
+        </div>
+
+        <!-- الخطوة 2 -->
+        <div class="pack-step" id="step2" style="display:none;">
+          <h3 data-ar="📏 اختر الحجم" data-fr="📏 Choisissez la taille">📏 اختر الحجم</h3>
+          <div class="options-grid">
+            <button class="option-btn" data-value="30ml" onclick="selectSize('30ml')">
+              <span>30 مل</span>
+              <small data-ar="حجم صغير" data-fr="Petit format">حجم صغير</small>
+            </button>
+            <button class="option-btn" data-value="50ml" onclick="selectSize('50ml')">
+              <span>50 مل</span>
+              <small data-ar="حجم متوسط" data-fr="Format moyen">حجم متوسط</small>
+            </button>
+          </div>
+          <button class="btn-back" onclick="goBack('step2')">
+            <i class="fas fa-arrow-right"></i> <span data-ar="رجوع" data-fr="Retour">رجوع</span>
+          </button>
+        </div>
+
+        <!-- الخطوة 3 -->
+        <div class="pack-step" id="step3" style="display:none;">
+          <h3 data-ar="🔢 اختر العدد" data-fr="🔢 Choisissez la quantité">🔢 اختر العدد</h3>
+          <div class="options-grid">
+            <button class="option-btn" data-value="1" onclick="selectQuantity('1')">
+              <span data-ar="1 عطر" data-fr="1 parfum">1 عطر</span>
+              <small data-ar="الاختيار المثالي" data-fr="Choix idéal">الاختيار المثالي</small>
+            </button>
+            <button class="option-btn" data-value="3" onclick="selectQuantity('3')">
+              <span data-ar="3 عطور" data-fr="3 parfums">3 عطور</span>
+              <small data-ar="باقة متكاملة" data-fr="Pack complet">باقة متكاملة</small>
+            </button>
+            <button class="option-btn special-offer" data-value="6" onclick="selectQuantity('6')" style="grid-column: span 2;">
+              <span>🎁 <span data-ar="6 عطور" data-fr="6 parfums">6 عطور</span></span>
+              <small data-ar="عرض خاص: 200 درهم (حجم 30 مل فقط)" data-fr="Offre spéciale: 200 DH (30 ml uniquement)">عرض خاص: 200 درهم (حجم 30 مل فقط)</small>
+            </button>
+          </div>
+          <button class="btn-back" onclick="goBack('step3')">
+            <i class="fas fa-arrow-right"></i> <span data-ar="رجوع" data-fr="Retour">رجوع</span>
+          </button>
+        </div>
+
+        <!-- الخطوة 4 -->
+        <div class="pack-step" id="step4" style="display:none;">
+          <h3 data-ar="📝 أدخل أسماء العطور" data-fr="📝 Entrez les noms des parfums">📝 أدخل أسماء العطور</h3>
+          
+          <!-- صورة الفئة المختارة -->
+          <div class="perfume-single-image-container" id="perfumeSingleImageContainer">
+            <img id="perfumeSingleImage" src="" alt="صورة الفئة" />
+          </div>
+
+          <!-- صور مقترحة للعطور الصيفية (تظهر حسب الفئة) -->
+          <div class="summer-suggestions" id="summerSuggestions">
+            <p class="suggestions-title" data-ar="🌸 بعض العطور الصيفية المقترحة" data-fr="🌸 Quelques parfums d'été suggérés">🌸 بعض العطور الصيفية المقترحة</p>
+            <div class="suggestions-images">
+              <!-- صورة رجال (تظهر فقط عند اختيار رجال) -->
+              <img src="l.jpg" alt="عطر صيفي رجالي" class="suggestion-img suggestion-male" style="display:none;" />
+              <!-- صورة نساء (تظهر فقط عند اختيار نساء) -->
+              <img src="l.jpg" alt="عطر صيفي نسائي" class="suggestion-img suggestion-female" style="display:none;" />
+            </div>
+          </div>
+          
+          <div id="perfumeInputs"></div>
+          
+          <button class="btn-back" onclick="goBack('step4')">
+            <i class="fas fa-arrow-right"></i> <span data-ar="رجوع" data-fr="Retour">رجوع</span>
+          </button>
+          <button class="btn btn--gold btn--full" onclick="showSummary()" style="margin-top:1rem;">
+            <i class="fas fa-check"></i> <span data-ar="تأكيد الطلب" data-fr="Confirmer">تأكيد الطلب</span>
+          </button>
+        </div>
+
+        <!-- الخطوة 5 -->
+        <div class="pack-step" id="step5" style="display:none;">
+          <div class="summary-card">
+            <h3 data-ar="✅ ملخص طلبك" data-fr="✅ Récapitulatif">✅ ملخص طلبك</h3>
+            <div class="summary-item"><span data-ar="الفئة:" data-fr="Catégorie:">الفئة:</span><strong id="summaryGender">-</strong></div>
+            <div class="summary-item"><span data-ar="الحجم:" data-fr="Taille:">الحجم:</span><strong id="summarySize">-</strong></div>
+            <div class="summary-item"><span data-ar="العدد:" data-fr="Quantité:">العدد:</span><strong id="summaryQuantity">-</strong></div>
+            <div class="summary-item"><span data-ar="العطور:" data-fr="Parfums:">العطور:</span><strong id="summaryPerfumes">-</strong></div>
+            <div class="summary-item total"><span data-ar="السعر الإجمالي:" data-fr="Prix total:">السعر الإجمالي:</span><strong id="summaryPrice">-</strong></div>
+          </div>
+          <div class="form-group"><input type="text" id="clientName" placeholder="👤 الاسم الكامل *" data-ar-placeholder="👤 الاسم الكامل *" data-fr-placeholder="👤 Nom complet *" /></div>
+          <div class="form-group"><input type="text" id="clientCity" placeholder="📍 المدينة *" data-ar-placeholder="📍 المدينة *" data-fr-placeholder="📍 Ville *" /></div>
+          <div class="form-group"><input type="text" id="clientAddress" placeholder="🏠 العنوان التفصيلي *" data-ar-placeholder="🏠 العنوان التفصيلي *" data-fr-placeholder="🏠 Adresse détaillée *" /></div>
+          <div class="form-group"><input type="tel" id="clientPhone" placeholder="📱 رقم الهاتف *" data-ar-placeholder="📱 رقم الهاتف *" data-fr-placeholder="📱 Téléphone *" /></div>
+          <button class="btn btn--whatsapp btn--full" onclick="sendOrder()">
+            <i class="fab fa-whatsapp"></i> <span data-ar="أرسل الطلب عبر واتساب" data-fr="Envoyer par WhatsApp">أرسل الطلب عبر واتساب</span>
+          </button>
+          <button class="btn-back" onclick="goBack('step5')">
+            <i class="fas fa-arrow-right"></i> <span data-ar="تعديل الطلب" data-fr="Modifier">تعديل الطلب</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container about__inner">
+      <div class="about__img">
+        <img src="Us.png" alt="عطور TIJANI"/>
+        <div class="about__badge"><strong data-ar="منذ" data-fr="Depuis">منذ</strong><span>2020</span><small data-ar="سنوات من التميز" data-fr="années d'excellence">سنوات من التميز</small></div>
+      </div>
+      <div class="about__content">
+        <p class="section-eye" data-ar="قصتنا" data-fr="Notre histoire">قصتنا</p>
+        <h2 class="section-title">TIJANI <br/><em>PARFUMES</em></h2>
+        <p data-ar="TIJANI PARFUMES — علامة تجارية فاخرة متخصصة في العطور الأصيلة. نقدم تشكيلات متنوعة تناسب جميع الأذواق، مع تركيز خاص على الجودة والتميز." data-fr="TIJANI PARFUMES — une marque de luxe spécialisée dans les parfums authentiques. Nous proposons des collections variées pour tous les goûts, avec un accent sur la qualité et l'excellence.">TIJANI PARFUMES — علامة تجارية فاخرة متخصصة في العطور الأصيلة. نقدم تشكيلات متنوعة تناسب جميع الأذواق، مع تركيز خاص على الجودة والتميز.</p>
+        <p data-ar="كل عطر من تشكيلتنا يتم اختياره بعناية فائقة، ليمنحك تجربة حسية فريدة تدوم طويلاً." data-fr="Chaque parfum de notre collection est soigneusement sélectionné pour vous offrir une expérience sensorielle unique et durable.">كل عطر من تشكيلتنا يتم اختياره بعناية فائقة، ليمنحك تجربة حسية فريدة تدوم طويلاً.</p>
+        <div class="about__stats">
+          <div class="stat"><strong>+500</strong><small data-ar="عميل راضٍ" data-fr="clients satisfaits">عميل راضٍ</small></div>
+          <div class="stat"><strong>+30</strong><small data-ar="عطر فاخر" data-fr="parfums de luxe">عطر فاخر</small></div>
+            <div class="stat"><strong>100%</strong><small data-ar="عطور مركزة" data-fr="Extrait de parfums">عطور مركزة</small></div>
+        </div>
+        <a href="#pack" class="btn btn--gold
+        <a href="#pack" class="btn btn--gold btn--white-text" data-ar="اكتشف تشكيلاتنا" data-fr="Découvrez nos collections">اكتشف تشكيلاتنا</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container contact__inner">
+      <div class="contact__info">
+        <p class="section-eye" data-ar="تواصل معنا" data-fr="Contactez-nous">تواصل معنا</p>
+        <h2 class="section-title" data-ar="نحن هنا <br/><em>لخدمتك</em>" data-fr="Nous sommes là pour vous">نحن هنا <br/><em>لخدمتك</em></h2>
+        <div class="contact__items">
+          <a href="https://wa.me/212725759434" class="contact__item" target="_blank">
+            <span class="contact__icon"><i class="fab fa-whatsapp"></i></span>
+            <div><strong data-ar="واتساب" data-fr="WhatsApp">واتساب</strong><small>+212 7 25 75 94 34</small></div>
+          </a>
+          <div class="contact__item">
+            <span class="contact__icon"><i class="fas fa-map-marker-alt"></i></span>
+            <div><strong data-ar="العنوان" data-fr="Adresse">العنوان</strong><small>LOT N° I10-01, Haliopolis, Marrakech</small></div>
+          </div>
+          <div class="contact__item">
+            <span class="contact__icon"><i class="fas fa-clock"></i></span>
+            <div><strong data-ar="أوقات العمل" data-fr="Horaires">أوقات العمل</strong><small data-ar="الاثنين - السبت: 9ص - 8م" data-fr="Lun - Sam: 9h - 20h">الاثنين - السبت: 9ص - 8م</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="contact__cta-box">
+        <h3 data-ar="هل لديك سؤال؟" data-fr="Une question ?">هل لديك سؤال؟</h3>
+        <p data-ar="تواصل معنا مباشرة على واتساب وسنجيب عليك في أقرب وقت" data-fr="Contactez-nous directement sur WhatsApp et nous vous répondrons dans les plus brefs délais">تواصل معنا مباشرة على واتساب وسنجيب عليك في أقرب وقت</p>
+        <a href="https://wa.me/212725759434?text=السلام عليكم، أريد الاستفسار عن عطور TIJANI 🌸" class="btn btn--whatsapp" target="_blank">
+          <i class="fab fa-whatsapp"></i> <span data-ar="راسلنا على واتساب" data-fr="WhatsAppez-nous">راسلنا على واتساب</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <div class="header__logo" style="position:static;transform:none;">
+          <img src="Log2.png" alt="TIJANI PARFUMES" class="logo-icon">
+          <div class="logo-text">
+            <span class="logo-main" style="color:white;">TIJANI</span>
+            <span class="logo-sub">PERFUMES</span>
+          </div>
+        </div>
+        <p data-ar="عطور فاخرة — نقدم لك أفضل التشكيلات العطرية بأعلى معايير الجودة." data-fr="Parfums de luxe — nous vous proposons les meilleures collections avec les plus hauts standards de qualité.">عطور فاخرة — نقدم لك أفضل التشكيلات العطرية بأعلى معايير الجودة.</p>
+      </div>
+      <div class="footer__col"><h4 data-ar="التشكيلات" data-fr="Collections">التشكيلات</h4><a href="#pack" data-ar="رجال" data-fr="Homme">رجال</a><a href="#pack" data-ar="نساء" data-fr="Femme">نساء</a><a href="#pack" data-ar="باقات خاصة" data-fr="Packs spéciaux">باقات خاصة</a></div>
+      <div class="footer__col"><h4 data-ar="معلومات" data-fr="Informations">معلومات</h4><a href="#about" data-ar="من نحن" data-fr="À propos">من نحن</a><a href="#contact" data-ar="اتصل بنا" data-fr="Contact">اتصل بنا</a><a href="#" data-ar="سياسة الخصوصية" data-fr="Politique de confidentialité">سياسة الخصوصية</a></div>
+      <div class="footer__col">
+        <h4 data-ar="تواصل معنا" data-fr="Contactez-nous">تواصل معنا</h4>
+        <a href="https://wa.me/212725759434" target="_blank"><i class="fab fa-whatsapp"></i> <span data-ar="واتساب" data-fr="WhatsApp">واتساب</span></a>
+        <a href="https://www.facebook.com/profile.php?id=61592136270089"><i class="fab fa-facebook"></i> Facebook</a>
+        <a href="https://www.instagram.com/tijaniperfumes?igsh=MWo1bXo1bGw0ZWViZA=="><i class="fab fa-instagram"></i> Instagram</a>
+        <p class="footer__address">LOT N° I10-01, Haliopolis, Marrakech</p>
+      </div>
+    </div>
+    <div class="footer__bottom"><p>© 2025 TIJANI PARFUMES — <span data-ar="جميع الحقوق محفوظة" data-fr="Tous droits réservés">جميع الحقوق محفوظة</span></p></div>
+  </footer>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
